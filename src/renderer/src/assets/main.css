@@ -1,0 +1,70 @@
+/* src/components/CustomTitleBar.css */
+
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 32px; /* Standard title bar height */
+  background-color: #202020;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+/* This makes the entire bar draggable by default */
+.title-bar {
+  -webkit-app-region: drag;
+}
+
+/* You MUST disable the drag region on clickable elements */
+.title-bar-right button, .title-bar-left {
+  -webkit-app-region: no-drag;
+}
+
+.title-bar-left {
+  padding-left: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 20px;
+  height: 20px;
+}
+
+.title-bar-right {
+  display: flex;
+  height: 100%;
+}
+
+.title-bar-right button {
+  width: 46px;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.title-bar-right button:hover {
+  background-color: #383838;
+}
+
+#close-btn:hover {
+  background-color: #e81123;
+}
+/* src/components/MenuBar.css */
+.menu-bar {
+  display: flex;
+  gap: 20px;
+  padding: 0 10px;
+  height: 30px;
+  align-items: center;
+  background-color: #333333;
+  color: #cccccc;
+  font-size: 14px;
+}
